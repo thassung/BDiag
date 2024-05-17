@@ -1,4 +1,5 @@
 // Get Cornerstone imageIds and fetch metadata into RAM
+import { RenderingEngine, ViewportType, createImageIdsAndCacheMetaData } from 'cornerstone-tools';
 const imageIds = await createImageIdsAndCacheMetaData({
     StudyInstanceUID:
       '1.3.6.1.4.1.14519.5.2.1.7009.2403.334240657131972136850343327463',
@@ -8,7 +9,7 @@ const imageIds = await createImageIdsAndCacheMetaData({
   });
   
   // Final code
-  const content = document.getElementById('content');
+  const content = document.getElementById('cornerstoneViewer');
   const element = document.createElement('div');
   element.style.width = '500px';
   element.style.height = '500px';
